@@ -79,7 +79,7 @@ if __name__ == '__main__':
         grading_data = zip(*csv.reader(grading_csv_file))[1:]
         students_data = json.load(students_json_file)
 
-    mails = list(compose_mails(grading_data, students_data))[9:10]
+    mails = list(compose_mails(grading_data, students_data))
 
     for payload, mail_from, rcpt_to, msg_id in mails:
         print payload
